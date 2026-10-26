@@ -11,8 +11,8 @@ export function layout({ config, base, active, title, description, body }) {
   return '<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' +
     '<title>' + e(title ? title + ' — ' + config.title : config.title + ' — ' + config.description) + '</title>' +
     '<meta name="description" content="' + e(description ?? config.description) + '">' +
-    '<meta name="theme-color" content="#f7f5ef"><link rel="icon" href="' + url('favicon.svg') + '">' +
-    '<link rel="stylesheet" href="' + url('style.css') + '"><script src="' + url('app.js') + '" defer></script></head><body>' +
+    '<meta name="theme-color" content="#1e1f24"><link rel="icon" href="' + url('favicon.svg') + '">' +
+    '<link rel="stylesheet" href="' + url('style.css') + '"><link rel="stylesheet" href="' + url('theme.css') + '"><script src="' + url('app.js') + '" defer></script></head><body>' +
     '<a class="skip" href="#main">본문으로 건너뛰기</a><div class="shell"><header class="site-header">' +
     anchor(url(), '<span class="brand-icon">↗</span><span>' + e(config.title) + '<small>A SMALL, OPEN WORKSHOP</small></span>', 'brand') +
     '<nav aria-label="주 메뉴">' + nav.map(([route, label, key]) => '<a href="' + url(route) + '"' + (active === key ? ' aria-current="page"' : '') + '>' + label + '</a>').join('') +
